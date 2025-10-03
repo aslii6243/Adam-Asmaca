@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #f751f4, #f751f4);
+  color: #e6f3fb;
+}
+
+.wrap {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.card {
+  background: #f781e1;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px 16px;
+  background: #eb07b2;
+  color: #8a0b6f;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.muted {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+#hangman {
+  width: 300px;
+  height: auto;   
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.letter {
+  width: 40px;
+  height: 50px;
+  border-bottom: 3px solid #fff;
+  font-size: 26px;
+  text-align: center;
+}
+
+.letter.hidden {
+  color: transparent;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.key {
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  cursor: pointer;
+}
+
+.key.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.status {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 14px;
+  opacity: 0.9;
+  z-index: 9999;
+  transform: rotate(0deg);
+  border-radius: 2px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+

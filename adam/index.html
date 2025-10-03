@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam Asmaca Oyunu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Başlangıç ekranı -->
+    <section id="startScreen" class="card">
+      <h2>Adam Asmaca’ya Hoş Geldin</h2>
+      <p>Konu ve kelime uzunluğu seç:</p>
+
+      <label for="topic">Konu:</label>
+      <select id="topic">
+        <option value="hayvanlar">Hayvanlar</option>
+        <option value="ülkeler">Ülkeler</option>
+        <option value="programlama">Programlama</option>
+        <option value="çiçek">Çiçekler</option>
+      </select>
+
+      <label for="length">Kelime uzunluğu:</label>
+      <select id="length">
+        <option value="short">4–6 harf</option>
+        <option value="medium">7–9 harf</option>
+        <option value="long">10+ harf</option>
+      </select>
+
+      <button id="startBtn" class="btn">Oyunu Başlat</button>
+    </section>
+
+    <!-- Oyun ekranı -->
+    <section id="gameScreen" class="card" style="display:none;">
+      <div class="meta">
+        <div><strong>Oyun</strong></div>
+        <div class="muted">Kalan hak: <span id="lives">6</span></div>
+      </div>
+
+      <!-- Adam figürü -->
+      <div class="svg-wrap">
+        <svg id="hangman" viewBox="0 0 120 140">
+          <g stroke="#dbeafe" stroke-width="3" fill="none" stroke-linecap="round">
+            <line x1="10" y1="130" x2="110" y2="130" />
+            <line x1="30" y1="130" x2="30" y2="20" />
+            <line x1="30" y1="20" x2="80" y2="20" />
+            <line x1="80" y1="20" x2="80" y2="32" />
+            <circle id="head" cx="80" cy="44" r="8" style="display:none;" />
+            <line id="body" x1="80" y1="52" x2="80" y2="82" style="display:none;" />
+            <line id="armL" x1="80" y1="60" x2="68" y2="74" style="display:none;" />
+            <line id="armR" x1="80" y1="60" x2="92" y2="74" style="display:none;" />
+            <line id="legL" x1="80" y1="82" x2="70" y2="104" style="display:none;" />
+            <line id="legR" x1="80" y1="82" x2="90" y2="104" style="display:none;" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Kelime -->
+      <div id="word" class="word"></div>
+
+      <!-- Kontroller -->
+      <div class="controls">
+        <button id="newBtn" class="btn">Yeni Oyun</button>
+      </div>
+
+      <div id="message" class="status"></div>
+      <div id="keyboard" class="keyboard"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
